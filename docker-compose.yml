@@ -5,13 +5,11 @@ x-lagoon-project:
 
 services:
   node:
-    image: uselagoon/node-22:latest
+    build:
+      context: .
     labels:
       lagoon.type: node
     expose:
       - "3000"
-    volumes:
-      - .:/app:delegated
-    command: node -e "const h=require('http'); h.createServer((_,r)=>{r.writeHead(200);r.end('Seedcloud OK\n')}).listen(3000,()=>console.log('Ready'))"
 
 networks: {}
