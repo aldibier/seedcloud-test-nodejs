@@ -1,0 +1,1 @@
+{"name":"test-nodejs","version":"1.0.0","description":"Lagoon test","scripts":{"start":"node index.js"}}
